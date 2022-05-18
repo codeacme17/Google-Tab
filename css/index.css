@@ -57,8 +57,9 @@ a:hover{
 .signature{
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  right: 20px;
   font-family: Poppins;
   font-size: 13px;
   color: rgb(124, 123, 123);
+  font-style: italic;
 }
