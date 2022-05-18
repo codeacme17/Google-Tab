@@ -1,0 +1,14 @@
+.dark{
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark .logo_path{
+  fill: white;
+}
+
+
+.dark a:hover{
+  color: white !important;
+}
+

@@ -1,0 +1,11 @@
+{
+  "name": "Google Tab",
+  "description": "",
+  "version": "1.0.1",
+  "manifest_version": 3,
+  "permissions": ["tabCapture", "tabs", "activeTab"],
+  "background": {},
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  }
+}
