@@ -14,6 +14,6 @@ You may come across some setup options, don't worry, everything is safe.
 
 Hope you like.
 
-## Some Feature
+## Some Features
 
 If your ip is in some regions that do not support google (such as China), the search engine will automatically switch to Baidu.
