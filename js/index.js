@@ -1,15 +1,22 @@
-const body = document.querySelector("body");
+import Ping from "./ping.js";
+import setDarkMode from "./darkmode.js";
+
 const input = document.getElementById("input");
+const baidu = "https://www.baidu.com/s?wd=asd";
+const google = "https://www.google.com/search?q=";
+const ping = new Ping("https://www.google.com/");
 
-let customerDarkMatched = window.matchMedia(
-  "(prefers-color-scheme: dark)"
-).matches;
+setDarkMode();
 
-if (customerDarkMatched) body.classList.add("dark");
+let pingRes = await ping.ping();
 
 input.addEventListener("keydown", (e) => {
   let isEnter = e.key === "Enter";
-
-  if (isEnter)
-    window.location = "https://www.google.com/search?q=" + input.value;
+  if (isEnter) {
+    if (pingRes === "") {
+      window.location = google + input.value;
+    } else {
+      window.location = baidu + input.value;
+    }
+  }
 });
