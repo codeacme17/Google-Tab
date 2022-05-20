@@ -2,7 +2,7 @@ import Ping from "./ping.js";
 import setDarkMode from "./darkmode.js";
 
 const input = document.getElementById("input");
-const baidu = "https://www.baidu.com/s?wd=asd";
+const baidu = "https://www.baidu.com/s?wd=";
 const google = "https://www.google.com/search?q=";
 const ping = new Ping("https://www.google.com/");
 

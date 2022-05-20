@@ -23,7 +23,7 @@ class Ping {
   async ping() {
     let res = "";
     await this.timeout(
-      800,
+      1500,
       fetch(this.url, {
         mode: "no-cors",
       })
