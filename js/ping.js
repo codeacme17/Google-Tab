@@ -1,6 +1,7 @@
 class Ping {
   constructor(url) {
     this.url = url;
+    this.ms = 2000;
   }
 
   async timeout(ms, promise) {
@@ -8,6 +9,7 @@ class Ping {
       const timer = setTimeout(() => {
         reject(new Error("TIMEOUT"));
       }, ms);
+
       promise
         .then((value) => {
           clearTimeout(timer);
@@ -21,23 +23,23 @@ class Ping {
   }
 
   async ping() {
-    let res = "";
+    let pingRes = "";
     await this.timeout(
-      1000,
+      this.ms,
       fetch(this.url, {
         mode: "no-cors",
       })
     )
       .then(function (res) {
-        res = "success";
+        pingRes = "success";
         return;
       })
       .catch(function (error) {
-        res = "failure";
+        pingRes = "failure";
         return;
       });
 
-    return res;
+    return pingRes;
   }
 }
 

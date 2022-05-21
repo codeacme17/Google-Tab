@@ -13,7 +13,7 @@ const pingRes = await ping.ping();
 input.addEventListener("keydown", (e) => {
   let isEnter = e.key === "Enter";
   if (isEnter) {
-    if (pingRes === "") {
+    if (pingRes === "success") {
       window.location = google + input.value;
     } else {
       window.location = baidu + input.value;
