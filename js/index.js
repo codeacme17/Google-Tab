@@ -1,5 +1,6 @@
 import Ping from "./ping.js";
 import setDarkMode from "./darkmode.js";
+import isChinese from "./ischinese.js";
 
 setDarkMode();
 
@@ -13,6 +14,11 @@ const pingRes = await ping.ping();
 input.addEventListener("keydown", (e) => {
   let isEnter = e.key === "Enter";
   if (isEnter) {
+    if (isChinese(input.value)) {
+      window.location = baidu + input.value;
+      return;
+    }
+
     if (pingRes === "success") {
       window.location = google + input.value;
     } else {
